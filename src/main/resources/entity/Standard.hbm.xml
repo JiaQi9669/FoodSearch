@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.zqrc.foodsearch.entity.Standard" table="t_standard">
+		<id name="id" type="integer" column="id">
+			<generator class="native" />
+		</id>
+
+		<property name="uuid" type="string"/>
+		<property name="cl" type="float"/>
+		<property name="fnl" type="float"/>
+		<property name="hal" type="float"/>
+		<property name="kntl" type="float"/>
+		<property name="shsl" type="float"/>
+		<property name="jgwa" type="float"/>
+		<property name="jlzs" type="float"/>
+		<property name="dcjq" type="float"/>
+		<property name="hg" type="float"/>
+		<property name="pb" type="float"/>
+		<property name="gyhz" type="float"/>
+		<property name="hfxyjd" type="float"/>
+		<property name="xt" type="string"/>
+		<property name="sz" type="string"/>
+		<property name="zqw" type="string"/>
+		<property name="zz" type="string"/>
+		<property name="jhl" type="string"/>
+
+		<property name="type" type="integer"/>
+    </class>
+</hibernate-mapping>
