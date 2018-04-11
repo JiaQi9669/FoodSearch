@@ -55,6 +55,19 @@ public class HqlHelper {
 	}
 
 	/**
+	 * 拼接Where子句，一次添加一个条�?
+	 *
+	 * @param condition
+	 *            表达�?
+	 * @param params
+	 *            表达式中的参数�?
+	 */
+	public HqlHelper addLikeCondition(String condition, String params) {
+		orderByClause = orderByClause + "WHERE "+condition +"LIKE *"+params+"*";
+		return this;
+	}
+
+	/**
 	 * 
 	 * 如果第一个参数�?为true，则拼接Where子句，一次添加一个条�?
 	 * 
@@ -102,6 +115,7 @@ public class HqlHelper {
 		}
 		return this;
 	}
+
 
 	/**
 	 * 获取查询数据列表的HQL语句

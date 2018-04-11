@@ -11,4 +11,15 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional
 public class UserServiceImpl extends BaseDaoImpl<User> implements UserService {
+
+    /**
+     * 通过账号密码查询用户
+     * @param userName
+     * @param password
+     * @return User null
+     */
+    public User findByUNPW(String userName, String password) {
+        String hql ="from User where userName = ? and password = ?";
+        return (User) getSession().createQuery(hql).setString(0,userName).setString(1,password).uniqueResult();
+    }
 }

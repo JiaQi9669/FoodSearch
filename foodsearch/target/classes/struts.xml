@@ -12,6 +12,15 @@
 		<!-- 用户相关 -->
 		<action name="User_*" class="com.zqrc.foodsearch.pro.action.UserAction" method="{1}">
 			<result name="toLogin">\WEB-INF\Login.jsp</result>
+			<result name="toIndex">\WEB-INF\index.jsp</result>
+			<result name="toMain">\WEB-INF\main.jsp</result>
+			<result name="toMainTable">\WEB-INF\mainTable.jsp</result>
+		</action>
+
+		<action name="Standard_*" class="com.zqrc.foodsearch.pro.action.StandardAction" method="{1}">
+			<result name="toAddStandard">\WEB-INF\addStandard.jsp</result>
+			<result name="toMainTable">\WEB-INF\mainTable.jsp</result>
+			<result name="toShowTable">\WEB-INF\showStandard.jsp</result>
 		</action>
 
 	</package>

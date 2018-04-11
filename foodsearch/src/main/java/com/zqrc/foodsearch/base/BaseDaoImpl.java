@@ -124,7 +124,7 @@ public abstract class BaseDaoImpl<T> implements BaseDao<T>{
 				countQuery.setParameter(i, parameters.get(i));
 			}
 		}
-		Integer count = (Integer) countQuery.uniqueResult(); // 执行查询
+		Integer count = Integer.valueOf(countQuery.uniqueResult().toString()); // 执行查询
 
 		return new PageBean(pageNum, pageSize, count.intValue(), list);
 	}
